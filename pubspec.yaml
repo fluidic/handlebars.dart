@@ -1,6 +1,6 @@
 name: handlebars
 description: A wrapper for the Handlebars.js library.
-version: 0.1.0
+version: 0.2.0
 author: Fluidic Team <dev@fluidic.io>
 homepage: https://github.com/fluidic/handlebars.dart
 
@@ -9,7 +9,6 @@ environment:
 
 dependencies:
   js: '>=0.6.0 <0.7.0'
-  js_util: '>=0.2.0 <0.3.0'
 
 dev_dependencies:
   browser: ^0.10.0+2

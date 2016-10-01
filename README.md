@@ -4,14 +4,13 @@ A wrapper for the Handlebars.js library.
 
 ## Usage
 
-Include the native JavaScript `handlebars` and `js_util` libraries provided with
-this library in `index.html`.
+Include the native JavaScript `handlebars` library provided with this
+package in `index.html`.
 
 ```html
 <html>
   <head>
     <script src="packages/handlebars/dist/handlebars-v4.0.5.js"></script>
-    <script src="packages/js_util/dist/js_util.js"></script>
     <script async type="application/dart" src="your_app_name.dart"></script>
     <script async src="packages/browser/dart.js"></script>
   </head>

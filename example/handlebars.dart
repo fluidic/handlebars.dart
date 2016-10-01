@@ -4,11 +4,11 @@
 @JS()
 library example.handlebars;
 
+import 'dart:js_util';
 import 'dart:html';
 
 import 'package:handlebars/handlebars.dart';
 import 'package:js/js.dart';
-import 'package:js_util/js_util.dart';
 
 @JS()
 @anonymous
@@ -56,7 +56,7 @@ class Item {
 }
 
 String list(items, Options options) {
-  final className = getValue(options.hash, 'class');
+  final className = getProperty(options.hash, 'class');
   final buffer = new StringBuffer();
   buffer.writeln('<ul class="${className}">');
 
@@ -90,7 +90,7 @@ void renderPeople() {
   handlebars.registerHelper('list', allowInterop(list));
   handlebars.registerHelper('my-if', allowInteropCaptureThis(myIf));
 
-  final context = toJS({
+  final context = jsify({
     'people': [
       {'firstName': 'Yehuda', 'lastName': 'Katz', 'isActive': false},
       {'firstName': 'Carl', 'lastName': 'Lerche', 'isActive': true},
